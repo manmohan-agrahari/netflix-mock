@@ -1,1 +1,39 @@
-<p>login works!</p>
+<div class="login-wrapper">
+  <div class="login-form-main">
+    <h1>Sign In</h1>
+    <form class="login-form">
+      <mat-form-field class="login-form-email" appearance="fill">
+        <mat-label>Email or phone number</mat-label>
+        <input matInput type="text" />
+      </mat-form-field>
+
+      <mat-form-field class="login-form-password" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="text" />
+      </mat-form-field>
+      <button mat-raised-button class="login-form-submit-btn" color="warn">
+        Sign In
+      </button>
+      <div class="login-form-help">
+        <mat-checkbox class="login-form-check">Remember me</mat-checkbox>
+        <a href="#">Need help ?</a>
+      </div>
+    </form>
+  </div>
+  <div class="login-form-other">
+    <div class="login-form-other-fb">
+      <img src="assets/images/FB.png" alt="logo" />
+      <a href="#">Login with Facebook</a>
+    </div>
+    <div class="login-form-other-signup">
+      <span>New to Netflix?</span><a href="#"> Sign up now.</a>
+    </div>
+    <div class="login-form-other-recaptcha">
+      <span
+        >This page is protected by Google reCAPTCHA to ensure you're not a
+        bot.</span
+      >
+      <a href="#">Learn more.</a>
+    </div>
+  </div>
+</div>

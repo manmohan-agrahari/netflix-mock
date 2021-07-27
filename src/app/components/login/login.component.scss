@@ -1,0 +1,104 @@
+.login-wrapper {
+  width:450px;
+  height: 671px;
+  background-color: rosybrown;
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  margin-top: 100px;
+  background-color: rgba(0,0,0,0.75);
+  padding: 0 50px;
+  .login-form-main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    h1{
+      font-size: 2em;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      &-email{
+        margin-top: 10px;
+      }
+      &-submit-btn {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 5px 0;
+        font-size: 1rem;
+      }
+      &-help {
+        //display: flex;
+        position: relative;
+        flex-direction: row;
+        color: #b3b3b3;
+        font-size: 13px;
+      //  font-weight: 500;
+
+        .login-form-check {
+          float: left;
+
+        }
+        a{
+          float: right;
+          cursor: pointer;
+          text-decoration: none;
+          margin-top: 5px;
+          color:#b3b3b3;
+        }
+      }
+    }
+  }
+  .login-form-other{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    margin-top: 50px;
+    &-fb{
+      display: flex;
+      flex-direction: row;
+      gap:10px;
+      img{
+        height: 20px;
+        width:20px;
+      }
+      a{
+        text-decoration: none;
+        color:#b3b3b3;
+        font-size: 13px;
+        cursor: pointer;
+      }
+    }
+    &-signup{
+     display: flex;
+     flex-direction: row;
+     font-size: 16px;
+     font-weight: 400;
+     margin-top: 16px;
+     color:#737373;
+     a{
+       color:#fff;
+       margin-left: 5px;
+       text-decoration: none;
+      }
+    }
+    &-recaptcha {
+    margin-top: 10px;
+    color: #8c8c8c;
+    a{
+      color:blue;
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+    }
+
+  }
+
+
+}

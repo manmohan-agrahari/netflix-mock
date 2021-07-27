@@ -1,4 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  width:100%;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: url('assets/images/bg.jpg');
+}
+
+//mat-input style
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #333;
+}
+
+/*change color of label*/
+.mat-focused .mat-form-field-label {
+  color: #8c8c8c !important;
+}
+
+.mat-form-field-label {
+  color: #8c8c8c !important;
+}
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #e87c03;
+}
+
+//checkbox
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #8c8c8c;
+}
+.mat-ripple-element{
+  display: none !important;
+}
+
+span.mat-checkbox-inner-container {
+  background-color: #fff;
+}
