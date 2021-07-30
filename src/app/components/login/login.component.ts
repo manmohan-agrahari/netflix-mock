@@ -35,13 +35,6 @@ export class LoginComponent implements OnInit {
       returnSecureToken:true
 
     }
-    //console.log(user)
-    this.loginService.signIn(user).subscribe((res)=>console.log(res))
-    setTimeout(()=>{
-
-      this.spin=false;
-    }, 5000)
-
     this.store.dispatch(LoginStart({user}))
 
   }
