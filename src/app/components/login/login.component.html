@@ -1,6 +1,6 @@
 <div class="login-wrapper">
   <div class="login-form-main">
-    <h1>sign in</h1>
+    <h1>Sign In</h1>
     <div class="login-error" >
       <span class="login-error-msg"
         >Sorry, we couldn't find an account with this email address. Please try
@@ -25,7 +25,7 @@
         <mat-error>{{ errMsg.passwordErrorMsg }}</mat-error>
       </mat-form-field>
       <button mat-raised-button class="login-form-submit-btn" [disabled]="spin" color="warn">
-        {{ !spin ? "sign in" : "" }}
+        {{ !spin ? "Sign In" : "" }}
         <span>
           <mat-spinner *ngIf="spin" diameter="20"></mat-spinner>
         </span>
