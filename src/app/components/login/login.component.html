@@ -1,21 +1,39 @@
 <div class="login-wrapper">
   <div class="login-form-main">
-    <h1>Sign In</h1>
-    <form class="login-form">
+    <h1>sign in</h1>
+    <div class="login-error" >
+      <span class="login-error-msg"
+        >Sorry, we couldn't find an account with this email address. Please try
+        again or <a href="#">create a new account</a>
+      </span>
+    </div>
+    <form
+      class="login-form"
+      [formGroup]="loginForm"
+      (ngSubmit)="loginSubmit()"
+      spellcheck="false"
+    >
       <mat-form-field class="login-form-email" appearance="fill">
         <mat-label>Email or phone number</mat-label>
-        <input matInput type="text" />
+        <input matInput type="text" formControlName="email" />
+        <mat-error>{{ errMsg.emailErrorMsg }}</mat-error>
       </mat-form-field>
 
       <mat-form-field class="login-form-password" appearance="fill">
         <mat-label>Password</mat-label>
-        <input matInput type="text" />
+        <input matInput type="text" formControlName="password" />
+        <mat-error>{{ errMsg.passwordErrorMsg }}</mat-error>
       </mat-form-field>
-      <button mat-raised-button class="login-form-submit-btn" color="warn">
-        Sign In
+      <button mat-raised-button class="login-form-submit-btn" [disabled]="spin" color="warn">
+        {{ !spin ? "sign in" : "" }}
+        <span>
+          <mat-spinner *ngIf="spin" diameter="20"></mat-spinner>
+        </span>
       </button>
       <div class="login-form-help">
-        <mat-checkbox class="login-form-check">Remember me</mat-checkbox>
+        <mat-checkbox class="login-form-check" formControlName="checked"
+          >Remember me</mat-checkbox
+        >
         <a href="#">Need help ?</a>
       </div>
     </form>
@@ -37,3 +55,5 @@
     </div>
   </div>
 </div>
+
+<div class="footer"></div>

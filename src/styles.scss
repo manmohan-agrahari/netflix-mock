@@ -10,12 +10,13 @@ body {
   height: 100%;
 }
 body {
-  width:100%;
-  height:100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: url('assets/images/bg.jpg');
+  background: url("assets/images/bg.jpg");
 }
 
 //mat-input style
@@ -31,18 +32,46 @@ body {
 .mat-form-field-label {
   color: #8c8c8c !important;
 }
+
 .mat-form-field.mat-focused .mat-form-field-ripple {
-  background-color: #e87c03;
+  background-color: #333; //#e87c03;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+  background-color: #e87c03 !important;
 }
 
 //checkbox
-.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
   background-color: #8c8c8c;
 }
-.mat-ripple-element{
+.mat-ripple-element {
   display: none !important;
 }
 
 span.mat-checkbox-inner-container {
   background-color: #fff;
+}
+
+@media only screen and (max-width: 740px) {
+  body {
+    background: none;
+  }
+}
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: white;
+}
+
+
+.mat-error {
+  color: #e87c03;
+  font-size: .8rem;
+}
+
+
+button.mat-focus-indicator.login-form-submit-btn.mat-raised-button.mat-button-base.mat-warn.mat-button-disabled {
+  background-color: rgba(255,0,0,0.5);
 }
