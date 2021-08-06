@@ -13,10 +13,11 @@ import { environment } from '../environments/environment'
 import { StoreModule } from '@ngrx/store'
 import { netflixReducer } from './store/reducers/netflix.reducers'
 import { EffectsModule } from '@ngrx/effects'
-import { NetflixEffects } from './store/effects/netflix.effects'
+import { NetflixEffects } from './store/effects/netflix.effects';
+import { HomeComponent } from './components/home/home.component'
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoginErrorDirective],
+  declarations: [AppComponent, LoginComponent, LoginErrorDirective, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

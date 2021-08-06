@@ -1,59 +1,72 @@
-<div class="login-wrapper">
-  <div class="login-form-main">
-    <h1>Sign In</h1>
-    <div class="login-error" >
-      <span class="login-error-msg"
-        >Sorry, we couldn't find an account with this email address. Please try
-        again or <a href="#">create a new account</a>
-      </span>
-    </div>
-    <form
-      class="login-form"
-      [formGroup]="loginForm"
-      (ngSubmit)="loginSubmit()"
-      spellcheck="false"
-    >
-      <mat-form-field class="login-form-email" appearance="fill">
-        <mat-label>Email or phone number</mat-label>
-        <input matInput type="text" formControlName="email" />
-        <mat-error>{{ errMsg.emailErrorMsg }}</mat-error>
-      </mat-form-field>
+<div class="login-wrapper1">
+  <div class="login-wrapper-background">
+    <img src="assets/images/bg.jpg" alt="" />
+  </div>
+  <div class="login-header">
+    <a href="#"><img src="assets/images/Netflix-Logo.svg" alt="" /></a>
+  </div>
 
-      <mat-form-field class="login-form-password" appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput type="text" formControlName="password" />
-        <mat-error>{{ errMsg.passwordErrorMsg }}</mat-error>
-      </mat-form-field>
-      <button mat-raised-button class="login-form-submit-btn" [disabled]="spin" color="warn">
-        {{ !spin ? "Sign In" : "" }}
-        <span>
-          <mat-spinner *ngIf="spin" diameter="20"></mat-spinner>
+  <div class="login-wrapper">
+    <div class="login-form-main">
+      <h1>Sign In</h1>
+      <div class="login-error" *ngIf="errorMsgDisplay">
+        <span class="login-error-msg"
+          >Sorry, we couldn't find an account with this email address. Please
+          try again or <a href="#">create a new account</a>
         </span>
-      </button>
-      <div class="login-form-help">
-        <mat-checkbox class="login-form-check" formControlName="checked"
-          >Remember me</mat-checkbox
-        >
-        <a href="#">Need help ?</a>
       </div>
-    </form>
-  </div>
-  <div class="login-form-other">
-    <div class="login-form-other-fb">
-      <img src="assets/images/FB.png" alt="logo" />
-      <a href="#">Login with Facebook</a>
-    </div>
-    <div class="login-form-other-signup">
-      <span>New to Netflix?</span><a href="#"> Sign up now.</a>
-    </div>
-    <div class="login-form-other-recaptcha">
-      <span
-        >This page is protected by Google reCAPTCHA to ensure you're not a
-        bot.</span
+      <form
+        class="login-form"
+        [formGroup]="loginForm"
+        (ngSubmit)="loginSubmit()"
+        spellcheck="false"
       >
-      <a href="#">Learn more.</a>
+        <mat-form-field class="login-form-email" appearance="fill">
+          <mat-label>Email or phone number</mat-label>
+          <input matInput type="text" formControlName="email" />
+          <mat-error>{{ errMsg.emailErrorMsg }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="login-form-password" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="text" formControlName="password" />
+          <mat-error>{{ errMsg.passwordErrorMsg }}</mat-error>
+        </mat-form-field>
+        <button
+          mat-raised-button
+          class="login-form-submit-btn"
+          [disabled]="spin"
+          color="warn"
+        >
+          {{ !spin ? "Sign In" : "" }}
+          <span>
+            <mat-spinner *ngIf="spin" diameter="20"></mat-spinner>
+          </span>
+        </button>
+        <div class="login-form-help">
+          <mat-checkbox class="login-form-check" formControlName="checked"
+            >Remember me</mat-checkbox
+          >
+          <a href="#">Need help ?</a>
+        </div>
+      </form>
+    </div>
+    <div class="login-form-other">
+      <div class="login-form-other-fb">
+        <img src="assets/images/FB.png" alt="logo" />
+        <a href="#">Login with Facebook</a>
+      </div>
+      <div class="login-form-other-signup">
+        <span>New to Netflix?</span><a href="#"> Sign up now.</a>
+      </div>
+      <div class="login-form-other-recaptcha">
+        <span
+          >This page is protected by Google reCAPTCHA to ensure you're not a
+          bot.</span
+        >
+        <a href="#">Learn more.</a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="footer"></div>
+</div>
