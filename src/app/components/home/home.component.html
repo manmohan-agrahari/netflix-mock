@@ -1,0 +1,39 @@
+<div class="our-story-container">
+ <div class="our-story-header-wrapper">
+   <div class="our-story-header">
+     <span class="svg-icon">
+       NETFLIX
+     </span>
+     <div class="lang-selection-container">
+       <mat-select [(ngModel)]="selected">
+           <mat-option value="English">English</mat-option>
+           <mat-option value="हिंदी">हिंदी</mat-option>
+       </mat-select>
+     </div>
+     <a routerLink="login">Sign In</a>
+   </div>
+ </div>
+ <div class="our-story-cards ">
+   <div class="our-story-card hero-card">
+     <div class="our-story-card-background">
+     </div>
+     <div class="our-story-card-text">
+       <h1 class='our-story-card-title'>Unlimited movies, TV shows and more.</h1>
+       <h2 class="our-story-card-subtitle">Watch anywhere. Cancel anytime.</h2>
+       <form>
+        <h3 class="email-form-title">Ready to watch? Enter your email to create
+          or restart your membership
+        </h3>
+        <div class="email-form-lockup">
+          <mat-form-field class="email-class" appearance="fill" style="width:550px">
+            <mat-label>Email address</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+
+        </div>
+       </form>
+     </div>
+   </div>
+
+ </div>
+</div>
