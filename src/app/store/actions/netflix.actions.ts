@@ -11,10 +11,10 @@ export const LoginSuccess = createAction(
 )
 export const LoginFailed = createAction('[Login Component] Login Failed')
 export const SetErrorMsg = createAction(
-  '[Login Component]',
-  props<{ payload: boolean }>(),
+  '[Login Component] Set Error Msg',
+  props<{ errorMsg : boolean }>(),
 )
 export const SetSpinner = createAction(
-  '[Login Component]',
+  '[Login Component]  Set Spinner ',
   props<{ payload: boolean }>(),
 )

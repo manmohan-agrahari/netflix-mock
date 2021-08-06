@@ -31,14 +31,14 @@ export const netflixReducer = createReducer(
   on(SetErrorMsg, (state, action) => {
     return {
       ...state,
-      errorMsg: true,
+      errorMsg: action.errorMsg,
     }
   }),
 
   on(SetSpinner, (state, action) => {
     return {
       ...state,
-      spinner: true,
+      spinner: action.payload,
     }
   }),
 )
